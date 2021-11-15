@@ -24,11 +24,11 @@ def quick_sort(arr, left, right)
 end
 
 arr = [5,1,3,4,7,8,2]
-p arr
+p "排序前: #{ arr }"
 quick_sort(arr, 0, arr.length - 1)
-p arr
+p "排序后: #{ arr }"
 p "========"
 arr = [2,2,2,3,6,4]
-p arr
+p "排序前: #{ arr }"
 quick_sort(arr, 0, arr.length - 1)
-p arr
+p "排序后: #{ arr }"
