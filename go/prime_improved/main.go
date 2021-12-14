@@ -44,11 +44,13 @@ func main() {
 	}
 
 
-	for i := 0; i < 4; i ++ {
-		<-boolChan
-	}
-
-	close(primeChan)
+	go func() {
+		for i := 0; i < 4; i ++ {
+			<-boolChan
+		}
+	
+		close(primeChan)
+	}()
 
 	for i := range primeChan {
 		fmt.Println(i)
